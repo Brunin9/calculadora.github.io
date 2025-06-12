@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  background-image: url('fundo.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  background-color: #ff348e;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(199,21,133, 0.25);
+  width: 320px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 24px 24px 32px 24px;
+  box-shadow: 0 12px 30px rgba(199, 21, 133, 0.4);
+}
+
+.display {
+  background-color: #ddd1d1;
+  border: 2px solid #FF69B4;
+  border-radius: 12px;
+  font-size: 2rem;
+  height: 56px;
+  padding: 0 16px;
+  color: #C71585;
+  text-align: right;
+  user-select: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 18px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  color: white;
+  user-select: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.btn:not(.btn-operator):not(.btn-function):not(.btn-equal) {
+  background-color: #FFB6C1;
+  color: #66122F;
+}
+
+.btn:not(.btn-operator):not(.btn-function):not(.btn-equal):hover {
+  background-color: #FF69B4;
+}
+
+.btn-operator {
+  background-color: #B22222; 
+}
+
+.btn-operator:hover {
+  background-color: #FF4500; 
+}
+
+.btn-function {
+  background-color: #FF6347;
+  color: white;
+}
+
+.btn-function:hover {
+  background-color: #FF4500; 
+}
+
+.btn-equal {
+  background: linear-gradient(135deg, #C71585, #FF4500);
+  box-shadow: 0 4px 15px rgba(255,69,0,0.7);
+}
+
+.btn-equal:hover {
+  background: linear-gradient(135deg, #FF4500, #B22222);
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #FF69B4;
+  outline-offset: 2px;
+}
+

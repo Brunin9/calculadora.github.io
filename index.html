@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="calculadora.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="calculator" role="application" aria-label="Calculadora">
+      <input
+        type="text"
+        id="display"
+        class="display"
+        aria-live="polite"
+        aria-atomic="true"
+        disabled
+        aria-label="Display da calculadora"
+      />
+      <div class="buttons" role="group" aria-label="Teclado da calculadora">
+        <button type="button" class="btn btn-function" aria-label="Limpar" onclick="clearDisplay()">C</button>
+        <button type="button" class="btn btn-function" aria-label="Abrir parênteses" onclick="appendToDisplay('(')">(</button>
+        <button type="button" class="btn btn-function" aria-label="Fechar parênteses" onclick="appendToDisplay(')')">)</button>
+        <button type="button" class="btn btn-operator" aria-label="Dividir" onclick="appendToDisplay('/')">÷</button>
+
+        <button type="button" class="btn" aria-label="Sete" onclick="appendToDisplay('7')">7</button>
+        <button type="button" class="btn" aria-label="Oito" onclick="appendToDisplay('8')">8</button>
+        <button type="button" class="btn" aria-label="Nove" onclick="appendToDisplay('9')">9</button>
+        <button type="button" class="btn btn-operator" aria-label="Multiplicar" onclick="appendToDisplay('*')">×</button>
+
+        <button type="button" class="btn" aria-label="Quatro" onclick="appendToDisplay('4')">4</button>
+        <button type="button" class="btn" aria-label="Cinco" onclick="appendToDisplay('5')">5</button>
+        <button type="button" class="btn" aria-label="Seis" onclick="appendToDisplay('6')">6</button>
+        <button type="button" class="btn btn-operator" aria-label="Subtrair" onclick="appendToDisplay('-')">−</button>
+
+        <button type="button" class="btn" aria-label="Um" onclick="appendToDisplay('1')">1</button>
+        <button type="button" class="btn" aria-label="Dois" onclick="appendToDisplay('2')">2</button>
+        <button type="button" class="btn" aria-label="Três" onclick="appendToDisplay('3')">3</button>
+        <button type="button" class="btn btn-operator" aria-label="Somar" onclick="appendToDisplay('+')">+</button>
+
+        <button type="button" class="btn btn-zero" aria-label="Zero" onclick="appendToDisplay('0')">0</button>
+        <button type="button" class="btn" aria-label="Ponto decimal" onclick="appendToDisplay('.')">,</button>
+        <button type="button" class="btn btn-equal" aria-label="Igual" onclick="calculateResult()">=</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
